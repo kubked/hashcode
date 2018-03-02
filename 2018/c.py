@@ -98,7 +98,7 @@ def solve_2(metadata, rides):
     def ride_car_value(car, ride):
         dist_to_start = distance_coord(car.state.x, car.state.y, ride.a, ride.b)
         min_s = max(ride.s, (car.state.t + dist_to_start))
-        return -(min_s + ride.dist)
+        return -min_s
 
     for i in range(metadata.F):
         car = Car(i)
